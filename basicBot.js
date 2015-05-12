@@ -181,9 +181,9 @@
     var basicBot = {
         version: "2.3.4",
         status: false,
-        name: "basicBot",
+        name: "BuzzjackBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
+        scriptLink: "https://raw.githubusercontent.com/hotchoc27/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
         chat: null,
@@ -191,12 +191,12 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "BuzzjackBot",
             language: "english",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
-            startupCap: 1, // 1-200
+            startupCap: 50, // 1-200
             startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
+            startupEmoji: true, // true or false
             cmdDeletion: true,
             maximumAfk: 120,
             afkRemoval: true,
@@ -208,9 +208,9 @@
             maximumLocktime: 10,
             cycleGuard: true,
             maximumCycletime: 10,
-            voteSkip: false,
+            voteSkip: true,
             voteSkipLimit: 10,
-            historySkip: false,
+            historySkip: true,
             timeGuard: true,
             maximumSongLength: 10,
             autodisable: true,
@@ -263,7 +263,7 @@
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
-            motdEnabled: false,
+            motdEnabled: true,
             motdInterval: 5,
             motd: "Temporary Message of the Day",
             filterChat: true,
@@ -293,7 +293,7 @@
             usercommand: true,
             allcommand: true,
             afkInterval: null,
-            autoskip: false,
+            autoskip: true,
             autoskipTimer: null,
             autodisableInterval: null,
             autodisableFunc: function () {
@@ -898,7 +898,7 @@
                 }
             }
 
-            /*var alreadyPlayed = false;
+            var alreadyPlayed = false;
             for (var i = 0; i < basicBot.room.historyList.length; i++) {
                 if (basicBot.room.historyList[i][0] === obj.media.cid) {
                     var firstPlayed = basicBot.room.historyList[i][1];
